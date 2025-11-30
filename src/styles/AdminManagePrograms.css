@@ -1,0 +1,188 @@
+/* Admin Manage Programs Page */
+
+.programs-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.programs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.programs-table thead {
+  background: linear-gradient(135deg, #f5f7fb 0%, #f0f2f5 100%);
+  border-bottom: 2px solid #ddd;
+}
+
+.programs-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #1b1b1b;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.programs-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.programs-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.programs-table td {
+  padding: 16px;
+  color: #666;
+}
+
+.programs-table .actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-edit,
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.btn-edit:hover {
+  transform: scale(1.2);
+}
+
+.btn-delete:hover {
+  transform: scale(1.2);
+}
+
+.program-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-form .form-group {
+  margin-bottom: 20px;
+}
+
+.program-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1b1b1b;
+}
+
+.program-form input,
+.program-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.program-form input:focus,
+.program-form select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-buttons .btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.form-buttons .btn-primary:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+}
+
+.form-buttons .btn-secondary {
+  background: #e0e0e0;
+  color: #1b1b1b;
+}
+
+.form-buttons .btn-secondary:hover {
+  background: #d0d0d0;
+}
+
+@media (max-width: 768px) {
+  .programs-table th,
+  .programs-table td {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .programs-table th {
+    font-size: 0.85rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs-table-container {
+    border-radius: 8px;
+  }
+
+  .programs-table th,
+  .programs-table td {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .programs-table th {
+    font-size: 0.75rem;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    font-size: 1rem;
+    padding: 4px 8px;
+  }
+}

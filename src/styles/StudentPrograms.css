@@ -1,0 +1,153 @@
+/* Student Programs Page */
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.program-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.program-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fb 0%, #f0f2f5 100%);
+  border-bottom: 2px solid #eee;
+}
+
+.program-header h3 {
+  margin: 0 0 12px 0;
+  color: #1b1b1b;
+  font-size: 1.15rem;
+}
+
+.mode-badge {
+  display: inline-block;
+  background: #2d6cdf;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.program-details {
+  padding: 20px;
+  flex: 1;
+}
+
+.program-details p {
+  margin: 10px 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.program-details strong {
+  color: #1b1b1b;
+}
+
+.status-open {
+  color: #2e7d32;
+  font-weight: 600;
+  background: #e8f5e9;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.status-closed {
+  color: #c62828;
+  font-weight: 600;
+  background: #ffebee;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.enrollment-info {
+  padding: 16px 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+.enrollment-info p {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2d6cdf 0%, #1e52c7 100%);
+  transition: width 0.3s ease;
+}
+
+.enroll-btn {
+  width: calc(100% - 40px);
+  margin: 0 20px 20px 20px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #2d6cdf 0%, #1e52c7 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enroll-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 108, 223, 0.3);
+}
+
+.enroll-btn.enrolled {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+}
+
+.enroll-btn.disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .programs-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    margin: 0;
+  }
+
+  .enroll-btn {
+    width: calc(100% - 40px);
+  }
+}

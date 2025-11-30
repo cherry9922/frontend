@@ -1,0 +1,158 @@
+/* Student Resources Page */
+
+.filter-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-section label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #1b1b1b;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #2d6cdf;
+  color: #2d6cdf;
+}
+
+.filter-btn.active {
+  background: #2d6cdf;
+  color: white;
+  border-color: #2d6cdf;
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.resource-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.resource-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  background: linear-gradient(135deg, #f5f7fb 0%, #f0f2f5 100%);
+  border-bottom: 1px solid #eee;
+}
+
+.resource-header h3 {
+  margin: 0 0 8px 0;
+  color: #1b1b1b;
+  font-size: 1.1rem;
+}
+
+.resource-header div {
+  flex: 1;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #2d6cdf;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2d6cdf;
+  padding: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.expand-btn:hover {
+  transform: scale(1.2);
+}
+
+.resource-content {
+  padding: 20px;
+  background: white;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+.resource-content p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.resource-footer {
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .category-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .resource-header {
+    padding: 16px;
+  }
+
+  .resource-content {
+    padding: 16px;
+  }
+}
